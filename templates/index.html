@@ -1,0 +1,173 @@
+{% extends "base.html" %}
+{% block content %}
+
+<style>
+
+.search-bar {
+  display: flex;
+  justify-content: flex-end; /* align right */
+  padding: 10px 20px;
+  background-color: #f5f7fa;
+}
+
+.seo {
+  display: flex;
+  gap: 8px;
+  width: 280px; /* chhoti box width */
+  background-color: white;
+  padding: 5px;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.seo input[type="text"] {
+  flex: 1;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.seo button {
+  padding: 8px 14px;
+  font-size: 14px;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.seo button:hover {
+  background-color: #005fa3;
+}
+
+.pages{
+
+}
+
+</style>
+<!-- ✅ Marquee Section -->
+<section class="marq" style="  background-color: rgba(11, 252, 248, 0.15); /* This is already yours */
+  padding: 15px 10px;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 700;
+  border-bottom: none;
+  line-height: 1;">
+  <marquee onmouseover="stop()" onmouseout="start()"style=" margin: 0;
+  padding: 0px;
+  border: none;
+  background: transparent;
+  line-height: 1;
+  display: block;">
+    {% for portfolio in portfolioData %}
+      <a href="/portfoliodetails/{{portfolio.portfolio_slug}}">{{ portfolio.portfolio_title }}</a>
+    {% endfor %}
+  </marquee>
+</section>
+
+<section class="search-bar" >
+  <form method="get" class="seo" >
+    <input type="text" name="search" placeholder="Search..." />
+    <button type="submit" >Search</button>
+  </form>
+</section>
+
+
+<!-- ✅ Hero Section -->
+<section class="home" style="padding: 60px 10%;
+  background-color: #f5f7fa;
+  width: 100%;
+  display: flex;
+  justify-content: center;"> 
+  <div class="hero" style="display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  width: 100%;">
+    
+    <div class="hero-text">
+      <h1>Hello, I'm <span>Deepanshu Patyal</span></h1>
+      <p>Passionate Django Developer & AI Learner</p>
+      <div class="hero-buttons">
+        <a href="/contact" class="btn-secondary">Let's Talk</a>
+      </div> 
+    </div>
+
+    <div class="hero-img" >
+      <img src="/static/deepanshu.jpg" alt="Deepanshu Patyal" style="flex: 1;
+  min-width: 80px;
+  max-width: 200px;
+  height:400px;
+  display: flex;
+  justify-content: center;"/>
+    </div>
+
+  </div>
+</section> 
+
+<!-- ✅ Highlights Section -->
+<section class="home-highlights" id="cards">
+  <h2>Explore My World</h2>
+  <div class="highlight-cards">
+    {% for n in servicesData %}
+      <div class="card">
+        <h3>{{n.services_icon}} {{n.services_title}}</h3>
+        <p>{{n.services_des | capfirst}}</p>
+        <a href="{{ n.services_button_link }}" class="card-btn">
+          {{ n.services_button_text }}
+        </a>
+      </div> 
+    {% empty %}
+      <h1 style="background: skyblue">NO Data Found</h1>
+    {% endfor %}
+  </div>
+</section>
+
+
+<div class="pages" style="margin-top: 20px; text-align: center;">
+  {% if servicesData.number != 1 %}
+  <a href="?page=1" class="scroll-to-cards">⟵ First</a>
+{% endif %}
+
+  {% if servicesData.has_previous %}
+    <a href="?page={{ servicesData.previous_page_number }}" class="scroll-to-cards">⟵ Prev</a>
+  {% endif %}
+ 
+ {% for n in totalpagelist %}
+  <a class="page-link {% if servicesData.number == n %}active-page{% endif %}" href="?page={{n}}">{{n}}</a>
+{% endfor %}
+
+  {% if servicesData.has_next %}
+    <a href="?page={{ servicesData.next_page_number }}" class="scroll-to-cards">Next ⟶</a>
+  {% endif %}
+
+ 
+
+
+  {% if servicesData.number != servicesData.paginator.num_pages %}
+  <a href="?page={{ lastpage }}" class="scroll-to-cards">Last ⟶</a>
+{% endif %}
+
+</div>
+
+<!-- ✅ Scroll to Highlights on Pagination -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has("page")) {
+      const section = document.getElementById("cards");
+      if (section) {
+        setTimeout(() => {
+          section.scrollIntoView({ behavior: "smooth" });
+        }, 200);
+      }
+    }
+  });
+</script>
+
+{% endblock %}

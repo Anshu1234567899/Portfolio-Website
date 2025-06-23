@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+
+  <!-- Projects Section -->
+  <section class="projects-section">
+    <h1>My Projects</h1>
+    <p class="intro">These are some of the real-world projects I have worked on:</p>
+
+    <div class="projects-grid">
+      <div class="project-card">
+        <img src="https://source.unsplash.com/400x250/?python,web" alt="Flask Blog">
+        <div class="card-content">
+          <h3>Flask Blogging Platform</h3>
+          <p>A dynamic blog with backend integration and user authentication using Flask.</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="https://source.unsplash.com/400x250/?ai,assistant" alt="Jarvis AI">
+        <div class="card-content">
+          <h3>Jarvis AI Assistant</h3>
+          <p>A Python-based voice assistant using OpenAI, weather, notes, and GUI features.</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="https://source.unsplash.com/400x250/?wordpress,blog" alt="BloggedIn">
+        <div class="card-content">
+          <h3>BloggedIn (WordPress)</h3>
+          <p>WordPress blog using Elementor, Gemini AI, and custom content optimization.</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="https://source.unsplash.com/400x250/?data,dashboard" alt="Dashboard">
+        <div class="card-content">
+          <h3>Student Dashboard (Django)</h3>
+          <p>A secure dashboard for managing student data with Django and PostgreSQL.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ {% endblock %}
+
