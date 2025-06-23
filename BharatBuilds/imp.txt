@@ -1,0 +1,26 @@
+## show all data in the terminal and screen 
+def registration(request):
+    Output= ""
+    try:
+        fullname=request.GET.get('fullname')
+        email=request.GET.get('email')
+        password=request.GET.get('password')
+        gender=request.GET.get('gender')
+        Output=fullname,email,password,gender 
+    
+    except:
+        pass
+
+
+###To show all details from entered by the user
+         <div>
+  Details: 
+      <input type="text" value ="{{details}}"/>
+</div>
+
+
+
+class Sevice(models.Model):
+    sevice_icon=models.CharField(max_length=50)
+    sevice_title=models.CharField(max_length=50)
+    sevice_des=models.TextField()
