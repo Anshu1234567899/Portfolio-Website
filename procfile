@@ -1,2 +1,2 @@
-web: gunicorn BharatBuilds.wsgi
+web: gunicorn BharatBuilds.wsgi:application
 
