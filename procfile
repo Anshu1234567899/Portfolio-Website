@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 web: gunicorn BharatBuilds.wsgi
+=======
+web: gunicorn BharatBuilds.wsgi
+>>>>>>> 876681c8413969cc389dd4e36e4c61eec798164f

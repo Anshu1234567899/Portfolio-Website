@@ -7,3 +7,4 @@ class registrationforms(forms.Form):
     # age=forms.IntegerField()
     # password=forms.CharField() 
      
+

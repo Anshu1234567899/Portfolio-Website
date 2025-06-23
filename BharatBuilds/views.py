@@ -217,4 +217,3 @@ def marksheet(request):
 
         return render(request,"marksheet.html",data)
 
-    return render(request,"marksheet.html")

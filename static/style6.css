@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* register-style.css */
 
 body {
@@ -92,3 +93,99 @@ body {
     font-size: 26px;
   }
 }
+=======
+/* register-style.css */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #e0eafc, #cfdef3);
+  color: #333;
+}
+
+.register-section {
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-container {
+  background-color: white;
+  max-width: 480px;
+  width: 100%;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  text-align: center;
+  position: relative;
+}
+
+.top-icon {
+  width: 70px;
+  margin-bottom: 20px;
+}
+
+.form-info h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.form-info p {
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.register-form input,
+.register-form select {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 18px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.register-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #101820;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 17px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.register-form button:hover {
+  background-color: #333;
+}
+
+.login-text {
+  margin-top: 20px;
+  color: #555;
+  font-size: 14px;
+}
+
+.login-text a {
+  color: #101820;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.login-text a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .register-container {
+    padding: 30px 20px;
+  }
+
+  .form-info h1 {
+    font-size: 26px;
+  }
+}
+>>>>>>> 876681c8413969cc389dd4e36e4c61eec798164f
