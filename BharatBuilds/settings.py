@@ -56,6 +56,7 @@ MIDDLEWARE = [
     
 ]
 
+
 ROOT_URLCONF = 'BharatBuilds.urls'
 
 TEMPLATES = [
