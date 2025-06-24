@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 {% extends "base.html" %}
 {% block content %}
 
@@ -23,30 +23,4 @@
     </div></center> 
 
 </div> 
-=======
-{% extends "base.html" %}
-{% block content %}
-
- <div>
-  <center><div class="calculator-container">
-    {% if error %}
-  <div style="background:#ffe6e6; color:#cc0000; padding:5px 10px; border-radius:5px; font-size:14px; border:1px solid #cc0000; display:inline-block; margin-top:10px;">
-    Please enter the value
-  </div>
-{% endif %}
-
-    <h2>🧮 Even And Odd Numbers</h2>
-    <form action="/evodd/" method="post">
-      {% csrf_token %}
-      <input type=" " name="num1" placeholder="Enter your number">
-
-      <button type="submit" class="btn-secondary">Check even or odd</button>
-    </form>
-<div class="result-box">
-        <p>Result: <strong>{{ e }}</strong></p>
-      </div>
-    </div></center> 
-
-</div> 
->>>>>>> 876681c8413969cc389dd4e36e4c61eec798164f
 {% endblock %}

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {% extends "base.html" %}
 {% block content %}
 
@@ -29,35 +28,3 @@
 </section>
 
 {% endblock %}
-=======
-{% extends "base.html" %}
-{% block content %}
-
-<section class="calculator-section">
-  <div class="calculator-container">
-    <h2>🧮 Simple Calculator</h2>
-    <form action="/calculator/" method="post">
-      {% csrf_token %}
-      <input type=" " name="num1" placeholder="Enter first number" required>
-      <input type=" " name="num2" placeholder="Enter second number" required>
-
-      <select name="operation" required>
-        <option value="">Select Operation</option>
-        <option value="add">Addition (+)</option>
-        <option value="subtract">Subtraction (-)</option>
-        <option value="multiply">Multiplication (×)</option>
-        <option value="divide">Division (÷)</option>
-        <option value="remainder">remainder(%)</option>
-      </select>
-
-      <button type="submit" class="btn-secondary">Calculate</button>
-    </form>
-<div class="result-box">
-        <p>Result: <strong>{{ c }}</strong></p>
-      </div>
-   
-  </div>
-</section>
-
-{% endblock %}
->>>>>>> 876681c8413969cc389dd4e36e4c61eec798164f

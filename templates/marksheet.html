@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {% extends 'base.html' %}
 {% block content %}
 
@@ -29,36 +28,3 @@
 
 
 
-=======
-{% extends 'base.html' %}
-{% block content %}
-
-
-  <div class="marksheet-container">
-    <h2>📘 Student Marksheet</h2>
-    <form action="/marksheet/" method="POST">
-      {% csrf_token %}
-      <input type="number" name="subject1" placeholder="Enter Marks" required>
-      <input type="number" name="subject2" placeholder="Enter Marks" required>
-      <input type="number" name="subject3" placeholder="Enter Marks" required>
-      <input type="number" name="subject4" placeholder="Enter Marks" required>
-      <input type="number" name="subject5" placeholder="Enter Marks" required>
-      <button type="submit" class="btn">Calculate</button>
-    </form>
-
-    <div class="result-box">
-        <p><strong>Total:</strong> {{ total }}</p>
-    </div>
-    <div class="result-box">
-        <p><strong>Percentage:</strong> {{ percentage }}%</p>
-    </div>
-   
-     <div class="result-box">
-        <p><strong>Division:</strong> {{ div }}</p>
-    </div>
-  </div>
-
-
-
->>>>>>> 876681c8413969cc389dd4e36e4c61eec798164f
-{% endblock %}

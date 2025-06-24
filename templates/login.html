@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {% extends "base.html" %}
 
 {% block title %}Login | Deepanshu{% endblock %}
@@ -30,36 +29,3 @@
 </section>
 
 {% endblock %}
-=======
-{% extends "base.html" %}
-
-{% block title %}Login | Deepanshu{% endblock %}
-
-
-{% block content %}
-
-<section class="login-section">
-  <div class="login-container">
-    <img src="https://cdn2.iconfinder.com/data/icons/flat-style-svg-icons-part-1/512/user_login_man-1024.png" alt="Login Icon" class="login-icon">
-
-    <div class="login-header">
-      <h1>Welcome Back!</h1>
-      <p>Login to continue your journey 🚀</p>
-    </div>
-<div>{{error}}</div><br>
-    <form action="/login/" method="POST" class="login-form" >
-    {% comment %} <form action="{% url 'detail' %}" method="POST" class="login-form" > {% endcomment %}
-       {% csrf_token %} 
-       {{form}}
-
-      {% comment %} <input type="email" name="email" placeholder="Email Address" required />
-      <input type="password" name="password" placeholder="Password" required /> {% endcomment %}
-      <button type="submit">Login</button>
-    </form>
-
-    <p class="register-text">Don't have an account? <a href="/registration">Register here</a></p>
-  </div>
-</section>
-
-{% endblock %}
->>>>>>> 876681c8413969cc389dd4e36e4c61eec798164f
