@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+{% load static %}
 <style>
 .search-bar {
   display: flex;
@@ -102,7 +103,7 @@
     </div>
 
     <div class="hero-img" >
-      <img src="/static/deepanshu.jpg" alt="Deepanshu Patyal" style="flex: 1;
+      <img src="{% static 'deepanshu.jpg' %}" alt="Deepanshu Patyal" style="flex: 1;
   min-width: 80px;
   max-width: 200px;
   height:400px;
