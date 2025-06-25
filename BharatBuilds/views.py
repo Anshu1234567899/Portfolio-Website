@@ -192,6 +192,7 @@ def evodd(request):
     return render(request,'evodd.html',{'e':e})
 
 def marksheet(request):
+    
     if request.method == "POST":
         s1=eval(request.POST.get('subject1'))
         s2=eval(request.POST.get('subject2'))
@@ -214,5 +215,6 @@ def marksheet(request):
             'percentage':p,
             'div':d
         }
-    return render(request,"marksheet.html",data)
 
+        return render(request,"marksheet.html",data)
+    return render(request,'marksheet.html')

@@ -21,14 +21,13 @@
   <link rel="icon" href="{% static 'favicon.ico' %}" type="image/x-icon" />
 </head>
 
-<body>
-  
-  {% include "header.html" %}
-  
-  {% block content %}
-  {% endblock %}
-  
-  {% include "footer.html" %}
 
+    {% include "header.html" %}
+  <main>
+      {% block content %}
+      {% endblock %}
+  </main>
+    {% include "footer.html" %}
+  
 </body>
 </html>

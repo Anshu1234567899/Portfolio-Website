@@ -133,7 +133,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),  # where your custom static files are
 ]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 AUTOSLUG_SLUGIFY_FUNCTION = 'django.utils.text.slugify'
 
