@@ -1,7 +1,18 @@
-/* responsive.css */
+/* === Base Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body, html {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* === Hero Section Mobile === */
 @media screen and (max-width: 768px) {
-  /* Stack the hero section */
   .hero {
     flex-direction: column;
     align-items: center;
@@ -20,9 +31,7 @@
     margin-top: 10px;
   }
 
-  
   .highlight-cards {
-    display: flex;
     flex-direction: column;
     align-items: center;
   }
@@ -33,7 +42,6 @@
   }
 
   .pages {
-    display: flex;
     flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
@@ -44,14 +52,15 @@
     font-size: 14px;
   }
 }
-/* === Base Nav === */
+
+/* === Navbar Base === */
 .navbar {
   background-color: #101820;
   padding: 10px 20px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
 }
 
 .logo {
@@ -60,43 +69,67 @@
   font-weight: bold;
 }
 
+/* Nav Links & Sign Up Button Style */
 .nav-links {
   display: flex;
   flex-wrap: wrap;
+  list-style: none;
   justify-content: flex-end;
   align-items: center;
-  list-style: none;
   gap: 10px;
   margin: 0;
   padding: 0;
 }
 
-.nav-links li a,
-.signup-btn {
+.nav-links li a {
   color: white;
   text-decoration: none;
   padding: 6px 10px;
   font-size: 14px;
-  border: none;
-  background: none;
-  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-/* === Mobile View Adjustment === */
+/* Highlight Current Page */
+.nav-links li a.active {
+  background-color: #00ffe7;
+  color: #101820;
+  border-radius: 6px;
+}
+
+/* Signup Button */
+.signup-btn {
+  background-color: #00ffe7;
+  color: #101820;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.signup-btn:hover {
+  background-color: #00e2d2;
+}
+
+/* === Mobile Navbar Adjustment === */
 @media screen and (max-width: 768px) {
+  .logo {
+    font-size: 16px;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+  }
+
   .nav-links {
-    flex-wrap: wrap;
+    width: 100%;
     justify-content: center;
-    gap: 8px;
+    gap: 6px;
   }
 
   .nav-links li a,
   .signup-btn {
     font-size: 13px;
     padding: 5px 8px;
-  }
-
-  .logo {
-    font-size: 16px;
   }
 }
