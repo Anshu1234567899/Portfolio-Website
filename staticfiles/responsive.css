@@ -1,25 +1,101 @@
-@media (max-width: 768px) {
-  .hero {
+/* Make sure body and main layout are responsive */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Images responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Flex and Grid Responsiveness */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.col {
+  flex: 1;
+  min-width: 280px;
+  margin-bottom: 20px;
+}
+
+/* Media Query for tighter screens */
+@media screen and (max-width: 768px) {
+  .row {
     flex-direction: column;
+    align-items: center;
+  }
+
+  .col {
+    width: 100%;
+  }
+
+  h1, h2, h3, p {
     text-align: center;
   }
 
-  .hero-img img {
+  .btn {
     width: 100%;
-    max-width: 250px;
-    height: auto;
+    text-align: center;
   }
+}
+/* Base Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 24px;
+  background-color: #111;
+  color: white;
+  flex-wrap: wrap;
+}
 
-  nav ul {
+.navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar .nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.navbar .nav-links li a {
+  text-decoration: none;
+  color: white;
+  padding: 6px 10px;
+}
+
+/* Responsive Layout */
+@media screen and (max-width: 768px) {
+  .navbar {
     flex-direction: column;
+    align-items: center;
   }
 
-  .highlight-cards {
+  .nav-links {
     flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding-top: 10px;
   }
 
-  .card {
-    width: 90%;
-    margin: 10px auto;
+  .nav-links li a {
+    font-size: 18px;
   }
 }
