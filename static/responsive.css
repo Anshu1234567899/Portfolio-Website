@@ -20,21 +20,7 @@
     margin-top: 10px;
   }
 
-  .search-bar {
-    justify-content: center;
-  }
-
-  .seo {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .seo input[type="text"],
-  .seo button {
-    width: 100%;
-    margin-top: 10px;
-  }
-
+  
   .highlight-cards {
     display: flex;
     flex-direction: column;
@@ -58,67 +44,59 @@
     font-size: 14px;
   }
 }
-/* ==== Basic Navbar Styling ==== */
+/* === Base Nav === */
 .navbar {
+  background-color: #101820;
+  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 5%;
-  background-color: #101820;
-  color: white;
   flex-wrap: wrap;
 }
 
-.navbar .logo {
-  font-size: 22px;
-  font-weight: bold;
+.logo {
   color: #00ffe7;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .nav-links {
   display: flex;
-  gap: 20px;
-  list-style: none;
   flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
 }
 
-.nav-links li a {
-  text-decoration: none;
+.nav-links li a,
+.signup-btn {
   color: white;
-  font-weight: 500;
-  padding: 8px 12px;
-  border-radius: 6px;
-  transition: background 0.3s ease;
+  text-decoration: none;
+  padding: 6px 10px;
+  font-size: 14px;
+  border: none;
+  background: none;
+  cursor: pointer;
 }
 
-.nav-links li a:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-/* ==== Responsive Navbar (No Toggle) ==== */
+/* === Mobile View Adjustment === */
 @media screen and (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    text-align: center;
-  }
-
   .nav-links {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding: 0;
-    margin-top: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
   }
 
-  .nav-links li {
-    width: 100%;
-    margin: 5px 0;
+  .nav-links li a,
+  .signup-btn {
+    font-size: 13px;
+    padding: 5px 8px;
   }
 
-  .nav-links li a {
-    display: block;
-    width: 100%;
+  .logo {
+    font-size: 16px;
   }
 }
