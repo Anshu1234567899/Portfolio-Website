@@ -214,6 +214,5 @@ def marksheet(request):
             'percentage':p,
             'div':d
         }
-
-        return render(request,"marksheet.html",data)
+    return render(request,"marksheet.html",data)
 

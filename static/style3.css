@@ -11,18 +11,7 @@ html, body {
 .wrapper {
   flex: 1;
 }
-marquee {
-  width: 100%;
-  padding: 10px;
-  background-color: #f0f0f0;
-  color: #101820;
-  font-size: 18px;
-  font-weight: bold;
-  border-bottom: 1px solid #ddd;
-  z-index: 1000;
-  position: relative;
-} 
- 
+
 .navbar {
   background-color: #101820;
   padding: 1rem 2rem;
