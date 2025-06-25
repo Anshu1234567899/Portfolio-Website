@@ -24,7 +24,20 @@
   color: #444;
   line-height: 1.8;
 }
+@media screen and (max-width: 768px) {
+    .portfolio-details {
+      padding: 20px 10px;
+      margin: 30px 10px;
+    }
 
+    .portfolio-details h1 {
+      font-size: 22px;
+    }
+
+    .portfolio-details p {
+      font-size: 15px;
+    }
+  }
 </style>
 <div class="portfolio-details">
   <h1>{{ portfoliodetails.portfolio_title }}</h1>

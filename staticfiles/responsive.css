@@ -1,101 +1,124 @@
-/* Make sure body and main layout are responsive */
-body, html {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
-  font-family: 'Poppins', sans-serif;
-}
+/* responsive.css */
 
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-}
-
-/* Images responsive */
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Flex and Grid Responsiveness */
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.col {
-  flex: 1;
-  min-width: 280px;
-  margin-bottom: 20px;
-}
-
-/* Media Query for tighter screens */
 @media screen and (max-width: 768px) {
-  .row {
+  /* Stack the hero section */
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-img img {
+    max-width: 80%;
+    height: auto;
+    margin: 20px 0;
+  }
+
+  .hero-buttons .btn-secondary {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .search-bar {
+    justify-content: center;
+  }
+
+  .seo {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .seo input[type="text"],
+  .seo button {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .highlight-cards {
+    display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  .col {
-    width: 100%;
+  .card {
+    width: 90%;
+    margin-bottom: 20px;
   }
 
-  h1, h2, h3, p {
-    text-align: center;
+  .pages {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
   }
 
-  .btn {
-    width: 100%;
-    text-align: center;
+  .pages a {
+    padding: 8px 12px;
+    font-size: 14px;
   }
 }
-/* Base Navbar Styling */
+/* ==== Basic Navbar Styling ==== */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 14px 24px;
-  background-color: #111;
+  padding: 15px 5%;
+  background-color: #101820;
   color: white;
   flex-wrap: wrap;
 }
 
 .navbar .logo {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: bold;
+  color: #00ffe7;
 }
 
-.navbar .nav-links {
+.nav-links {
   display: flex;
-  list-style: none;
   gap: 20px;
+  list-style: none;
+  flex-wrap: wrap;
 }
 
-.navbar .nav-links li a {
+.nav-links li a {
   text-decoration: none;
   color: white;
-  padding: 6px 10px;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background 0.3s ease;
 }
 
-/* Responsive Layout */
+.nav-links li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ==== Responsive Navbar (No Toggle) ==== */
 @media screen and (max-width: 768px) {
   .navbar {
     flex-direction: column;
     align-items: center;
+    padding: 10px;
+    text-align: center;
   }
 
   .nav-links {
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-    padding-top: 10px;
+    width: 100%;
+    padding: 0;
+    margin-top: 10px;
+  }
+
+  .nav-links li {
+    width: 100%;
+    margin: 5px 0;
   }
 
   .nav-links li a {
-    font-size: 18px;
+    display: block;
+    width: 100%;
   }
 }
