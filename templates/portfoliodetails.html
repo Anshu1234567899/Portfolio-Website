@@ -38,10 +38,17 @@
       font-size: 15px;
     }
   }
+  @media (max-width: 768px) {
+  .responsive-img {
+    width: 100%;
+    height: auto;
+  }
+}
+
 </style>
 <div class="portfolio-details">
   <h1>{{ portfoliodetails.portfolio_title }}</h1>
-  <div>
+  <div class="img">
     {% if portfoliodetails.portfolio_imag != Null %}
     <img src="/media/{{ portfoliodetails.portfolio_imag}}"style="width:500px; height:500px; border-radius:20px;"/>
     {% endif %}
