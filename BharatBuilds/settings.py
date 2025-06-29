@@ -137,8 +137,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 AUTOSLUG_SLUGIFY_FUNCTION = 'django.utils.text.slugify'
 
-MEDIA_ROOT=BASE_DIR/"media"
-MEDIA_URL="/media/"
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 EMAIL_HOST= 'smtp.gmail.com'
 EMAIL_PORT= 587

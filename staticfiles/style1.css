@@ -25,6 +25,7 @@ body {
 .logo {
   font-size: 24px;
   font-weight: bold;
+  text-decoration: none;  
 }
 
 .nav-links {
@@ -56,14 +57,12 @@ body {
   background-color: #e67e22;
 }
 
-/* Heading */
 .main h1 {
   margin-top: 30px;
   font-size: 36px;
   color: #2c3e50;
 }
 
-/* Form Container */
 .form-container {
   margin-top: 30px;
   background-color: white;
@@ -103,7 +102,6 @@ body {
   background-color: #2980b9;
 }
 
-/* Table Styling */
 table {
   margin-top: 30px;
   width: 80%;
@@ -121,7 +119,6 @@ th {
   text-align: center;
 }
 
-/* Number Output Styling */
 div {
   margin-top: 10px;
 }
