@@ -80,16 +80,30 @@ WSGI_APPLICATION = 'BharatBuilds.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'portfolio_db',         # ← jo naam diya database ka
-        'USER': 'postgres',             # ← default username
-        'PASSWORD': 'Patyal@2005',    # ← jo password set kiya installation mein
-        'HOST': 'localhost',
-        'PORT': '5432',
+if os.getenv("RENDER") == "True":
+    
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'portfolio_db_3h9v',
+            'USER': 'portfolio_user',
+            'PASSWORD': 'eSXJXHKD6Djcyhh0Gvh3is08gahYuqRO',
+            'HOST': 'dpg-d1k4ecer433s73c4bg6g-a.oregon-postgres.render.com',
+            'PORT': '5432',
+        }
     }
-}
+else:
+    
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'portfolio_db',
+            'USER': 'postgres',
+            'PASSWORD': 'Patyal@2005',
+            'HOST': 'localhost',
+            'PORT': '5432',
+        }
+    }
 
 
 
